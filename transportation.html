@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commonect - Housing and Transport Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ 
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* General styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+
+    }
+
+    .branding .container {
+        background-color: white;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .branding {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    
+    }
+
+    .main-content {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .container {
+        background-color: rgba(200,222,236);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 1800px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: rgba(200,222,236);
+    }
+
+    
+    h1 {
+      margin: 0;
+    }
+
+    /* Service sections */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-section {
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .service-section:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-5px);
+    }
+
+    .service-section h2 {
+      margin: 0;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #007bff;
+      text-align: center;
+    }
+
+    .service-section ul {
+      list-style-type: none;
+      padding: 0;
+      display: none;
+      margin-top: 10px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .service-section ul.show-details {
+      display: block;
+    }
+
+    .service-section li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .service-section li:last-child {
+      border-bottom: none;
+    }
+
+    /* Links */
+    .service-section a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+      text-align: center;
+      width: 100%;
+    }
+
+    .service-section a:hover {
+      color: #007bff;
+    }
+
+    /* Icons */
+    .service-icon {
+      font-size: 3rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    /* Additional updates section */
+    .updates {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .updates h2 {
+      color: #007bff;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .updates p {
+      margin: 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body> 
+    <div class="branding d-flex align-items-center">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Commonect</h1>
+            </a> 
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html#hero" class="active">Home<br></a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Features</a></li>
+                    <li class="dropdown"><a href="#"><span>Dashboard</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="users-profile.html">User profile</a></li>
+                            <li class="dropdown"><a href="#"><span>Our services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="metrics.html">Health</a></li>
+                                    <li><a href="education.html">Education</a></li>
+                                    <li><a href="transportation.html">Transportation</a></li>
+                                    <li><a href="finance.html">Finance</a></li>
+                                    <li><a href="govt.html">Government</a></li>
+                                    <li><a href="housing.html">Housing</a></li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="header">
+                <h1>Transport Services</h1>
+            </div>
+        </div>
+  
+  <div class="container">
+    <div class="service-grid">
+      <section id="auto-section" class="service-section" onclick="openService('auto')">
+        <i class="fas fa-taxi service-icon"></i>
+        <h2>Auto Services</h2>
+        <ul id="auto-services" class="service-list">
+          <li><a href="#">Nearest Auto Stand</a></li>
+          <li><a href="#">Auto Fare Comparison</a></li>
+        </ul>
+      </section>
+
+      <section id="two-wheeler-section" class="service-section" onclick="openService('two-wheeler')">
+        <i class="fas fa-motorcycle service-icon"></i>
+        <h2>Two Wheeler Services</h2>
+        <ul id="two-wheeler-services" class="service-list">
+          <li><a href="#">Nearest Bike Service Center</a></li>
+          <li><a href="#">Buy/Sell Two Wheeler</a></li>
+        </ul>
+      </section>
+
+      <section id="car-section" class="service-section" onclick="openService('car')">
+        <i class="fas fa-car service-icon"></i>
+        <h2>Car Services</h2>
+        <ul id="car-services" class="service-list">
+          <li><a href="#">Nearest Car Service Center</a></li>
+          <li><a href="#">Car Rental Services</a></li>
+        </ul>
+      </section>
+
+      <section id="bus-section" class="service-section" onclick="openService('bus')">
+        <i class="fas fa-bus service-icon"></i>
+        <h2>Bus Services</h2>
+        <ul id="bus-services" class="service-list">
+          <li><a href="#">Nearest Bus Stop</a></li>
+          <li><a href="#">Bus Routes and Timings</a></li>
+        </ul>
+      </section>
+
+      <section id="air-section" class="service-section" onclick="openService('air')">
+        <i class="fas fa-plane service-icon"></i>
+        <h2>Air Services</h2>
+        <ul id="air-services" class="service-list">
+          <li><a href="#">Nearest Airport</a></li>
+          <li><a href="#">Flight Booking Services</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- JavaScript for service toggling -->
+    <script>
+      function openService(serviceType) {
+        const services = document.querySelectorAll('.service-list');
+        services.forEach(service => {
+          if (service.id === `${serviceType}-services`) {
+            service.classList.toggle('show-details');
+          } else {
+            service.classList.remove('show-details');
+          }
+        });
+      }
+    </script>
+  </div>
+</body>
+</html>

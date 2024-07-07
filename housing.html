@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Dashboard</title>
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .branding {
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .branding .container {
+            background-color: white;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .main-content {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: rgba(200,222,236);
+            border-radius: 15px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 0;
+            margin-top:20px;
+            color: #333;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section styles */
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #007bff;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Button styles */
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* List styles */
+        ul {
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>    
+<body> 
+    <div class="branding d-flex align-items-center">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <h1 class="sitename">Commonect</h1>
+          </a> 
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html#hero" class="active">Home<br></a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="index.html#services">Features</a></li>
+              <li class="dropdown"><a href="#"><span>Dashboard</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="users-profile.html">User profile</a></li>
+                  <li class="dropdown"><a href="#"><span>Our services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="metrics.html">Health</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="transportation.html">Transportation</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                        <li><a href="govt.html">Government</a></li>
+                        <li><a href="housing.html">Housing</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+              </li>
+              <li><a href="index.html#faq">FAQ</a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <main>
+            <section id="services">
+                <h2>Services</h2>
+                <ul>
+                    <li><button onclick="showService('electrician')">Electrician</button></li>
+                    <li><button onclick="showService('plumber')">Plumber</button></li>
+                    <li><button onclick="showService('carpenter')">Carpenter</button></li>
+                    <li><button onclick="showService('painter')">Painter</button></li>
+                    <!-- Add more services as needed -->
+                </ul>
+            </section>
+    
+            <section id="contacts">
+                <h2>Contacts</h2>
+                <div id="serviceDetails">
+                    <!-- Content will be dynamically loaded here -->
+                </div>
+            </section>
+    
+            <section id="community">
+                <h2>Community Helpers</h2>
+                <ul>
+                    <li>John Doe - 123-456-7890</li>
+                    <li>Jane Smith - 987-654-3210</li>
+                </ul>
+            </section>
+    
+            <section id="suppliers">
+                <h2>Suppliers</h2>
+                <ul>
+                    <li>Green Grocers - Contact: 555-123-4567</li>
+                    <li>HydroPure Water - Contact: 555-987-6543</li>
+                </ul>
+            </section>
+    
+            <section id="maid">
+                <h2>Maid Contacts</h2>
+                <ul>
+                    <li>CleanHands Maid Service - 800-555-1212</li>
+                    <li>Sparkle Clean - 800-555-3434</li>
+                </ul>
+            </section>
+    
+            <section id="packers">
+                <h2>Packers and Movers Details</h2>
+                <ul>
+                    <li>Swift Packers & Movers - 888-555-1234</li>
+                    <li>RelocateEasy - 888-555-5678</li>
+                </ul>
+            </section>
+    
+            <section id="house-details">
+                <h2>House Renting/Purchase</h2>
+                <p>For details about house renting or purchasing, please contact:</p>
+                <p>Real Estate Experts Inc. - 800-555-0101</p>
+            </section>
+        </main>
+            
+            
+    
+    <script>
+        function showService(service) {
+            const serviceDetails = document.getElementById('serviceDetails');
+
+            // Clear previous content
+            serviceDetails.innerHTML = '';
+
+            // Example content for each service
+            switch(service) {
+                case 'electrician':
+                    serviceDetails.innerHTML = '<p>Contact details for Electricians:<br>John Electric - 555-123-4567<br>Smith Electricals - 555-987-6543</p>';
+                    break;
+                case 'plumber':
+                    serviceDetails.innerHTML = '<p>Contact details for Plumbers:<br>Plumb Master - 555-234-5678<br>WaterWorks Plumbing - 555-876-5432</p>';
+                    break;
+                case 'carpenter':
+                    serviceDetails.innerHTML = '<p>Contact details for Carpenters:<br>Craftsman Carpentry - 555-345-6789<br>WoodWorks - 555-765-4321</p>';
+                    break;
+                case 'painter':
+                    serviceDetails.innerHTML = '<p>Contact details for Painters:<br>ColorSplash Paint Co. - 555-456-7890<br>Fine Finish Painters - 555-654-3210</p>';
+                    break;
+                default:
+                    serviceDetails.innerHTML = '<p>No details found.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

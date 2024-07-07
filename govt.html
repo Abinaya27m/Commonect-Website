@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Services</title>
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding-top: 100px; /* Ensure content starts below the fixed navbar */
+        }
+      
+        .branding {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+      
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 1700px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+      
+      
+        h1 {
+            margin: 0;
+          }
+      
+          /* Service sections */
+          .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+          }
+      
+          .service-section {
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+      
+          .service-section:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+          }
+      
+          .service-section h2 {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #007bff;
+            text-align: center;
+          }
+      
+          .service-section ul {
+            list-style-type: none;
+            padding: 0;
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+            width: 100%;
+          }
+      
+          .service-section ul.show-details {
+            display: block;
+          }
+      
+          .service-section li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+          }
+      
+          .service-section li:last-child {
+            border-bottom: none;
+          }
+      
+          /* Links */
+          .service-section a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+            text-align: center;
+            width: 100%;
+          }
+      
+          .service-section a:hover {
+            color: #007bff;
+          }
+      
+          /* Icons */
+          .service-icon {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 10px;
+          }
+      
+          /* Additional updates section */
+          .updates {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }
+      
+          .updates h2 {
+            color: #007bff;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+          }
+      
+          .updates p {
+            margin: 0;
+            line-height: 1.6;
+          }
+    </style>
+    
+</head>    
+<body> 
+    <div class="branding d-flex align-items-center">
+
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">Commonect</h1>
+          </a> 
+  
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html#hero" class="active">Home<br></a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="index.html#services">Features</a></li>
+              
+              <li class="dropdown"><a href="#"><span>Dashboard
+              </span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="users-profile.html">User profile</a></li>
+                  <li class="dropdown"><a href="#"><span>Our services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="metrics.html">Health</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="transportation.html">Transportation</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                        <li><a href="govt.html">Government</a></li>
+                        <li><a href="housing.html">Housing</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+              </li>
+              <li><a href="index.html#faq">FAQ</a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+  
+        </div>
+  
+      </div>
+      <br>
+      <div class="container">
+        <div class="header">
+            <h1>Government services </h1>
+        </div>
+        <div class="service-grid">
+            <section id="aadhar-section" class="service-section" onclick="window.location.href='https://uidai.gov.in/'">
+              <i class="fas fa-id-card service-icon"></i>
+              <h2>Aadhar Services</h2>
+              <ul>
+                <li><a href="https://uidai.gov.in/">Nearest Aadhar Enrollment Center</a></li>
+                <li><a href="https://india.gov.in/">Land Registration Offices</a></li>
+              </ul>
+            </section>
+      
+            <section id="passport-section" class="service-section" onclick="window.location.href='https://passportindia.gov.in/'">
+              <i class="fas fa-passport service-icon"></i>
+              <h2>Passport Services</h2>
+              <ul>
+                <li><a href="https://passportindia.gov.in/">Passport Center Details</a></li>
+                <li><a href="https://passportindia.gov.in/AppOnlineProject/online/visaServices">VISA/Passport Consultant Details</a></li>
+              </ul>
+            </section>
+      
+            <section id="housing-approval-section" class="service-section" onclick="window.location.href='https://pmaymis.gov.in/'">
+              <i class="fas fa-home service-icon"></i>
+              <h2>Housing Approval Services</h2>
+              <ul>
+                <li><a href="https://pmaymis.gov.in/">Housing Plan Approval Centers</a></li>
+                <li><a href="https://pmaymis.gov.in/">Borewell/Water Supply Approval Centers</a></li>
+              </ul>
+            </section>
+      
+            <section id="ration-voter-section" class="service-section" onclick="window.location.href='https://nvsp.in/'">
+              <i class="fas fa-vote-yea service-icon"></i>
+              <h2>Ration Card/Voter ID Services</h2>
+              <ul>
+                <li><a href="https://nvsp.in/">Ration Card Centers</a></li>
+                <li><a href="https://nvsp.in/">Voter ID Centers</a></li>
+              </ul>
+            </section>
+      
+            <section id="government-schemes-section" class="service-section" onclick="window.location.href='https://india.gov.in/'">
+              <i class="fas fa-handshake service-icon"></i>
+              <h2>Government Schemes</h2>
+              <ul>
+                <li><a href="https://india.gov.in/">Schemes for Farmers</a></li>
+                <li><a href="https://india.gov.in/">Schemes for Women</a></li>
+                <li><a href="https://india.gov.in/">Scholarship Schemes for Students</a></li>
+              </ul>
+            </section>
+      
+            <section id="consultant-details-section" class="service-section" onclick="window.location.href='https://www.pensionersportal.gov.in/'">
+              <i class="fas fa-money-check-alt service-icon"></i>
+              <h2>Consultant Details</h2>
+              <ul>
+                <li><a href="https://www.pensionersportal.gov.in/">Pension Consultants</a></li>
+                <li><a href="https://www.epfindia.gov.in/site_en/">PF Consultants</a></li>
+                <li><a href="https://www.pensionersportal.gov.in/">Gratuity Consultants</a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="updates">
+            <h2>Government Updates</h2>
+            
+            <p><strong>Farmers' Welfare Scheme:</strong> New subsidies announced for agricultural equipment. Check eligibility and apply now.</p>
+            <p><strong>Education Scholarships:</strong> Applications open for merit-based scholarships for students. Deadline extended to August 15.</p>
+            <p><strong>Public Health Alert:</strong> Heatwave warning issued for the region. Stay hydrated and avoid outdoor activities during peak hours.</p>
+          </div>
+      </div>
+</body>
+</html>
